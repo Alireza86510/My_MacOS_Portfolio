@@ -37,14 +37,16 @@ const Photos = () => {
             {gallery.map(({ id, img }) => (
               <li
                 key={id}
-                onClick={openWindow("imgfile", {
-                  id,
-                  name: "Gallery Image",
-                  icon: "/images/image.png",
-                  kind: "file",
-                  fileType: "img",
-                  imageUrl: img,
-                })}
+                onClick={() =>
+                  openWindow("imgfile", {
+                    id,
+                    name: "Gallery Image",
+                    icon: "/images/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    imageUrl: img,
+                  })
+                }
               >
                 <img src={img} alt={`Gallery Image ${id}`} />
               </li>
