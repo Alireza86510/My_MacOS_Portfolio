@@ -181,11 +181,11 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/pic1.png",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/pic2.png",
   },
 ];
 
