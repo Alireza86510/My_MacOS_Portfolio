@@ -2,13 +2,10 @@ import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { Download } from "lucide-react";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/Page/AnnotationLayer";
-import "react-pdf/dist/Page/TextLayer";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Resume = () => {
   return (
@@ -28,6 +25,7 @@ const Resume = () => {
 
       <Document file="files/resume.pdf">
         <Page pageNumber={1} renderAnnotationLayer renderTextLayer />
+        <Page pageNumber={2} renderAnnotationLayer renderTextLayer />
       </Document>
     </>
   );
