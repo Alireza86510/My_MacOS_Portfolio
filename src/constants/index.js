@@ -38,37 +38,37 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Portfolio",
     icon: "finder.png",
     canOpen: true,
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Articles",
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Gallery",
     icon: "photos.png",
     canOpen: true,
   },
   {
     id: "contact",
-    name: "Contact", // or "Get in touch"
+    name: "Contact",
     icon: "contact.png",
     canOpen: true,
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "Skills",
     icon: "terminal.png",
     canOpen: true,
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
+    name: "Archive",
     icon: "trash.png",
     canOpen: false,
   },
@@ -102,7 +102,7 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "TypeScript"],
+    items: ["Next.js", "React.js", "TypeScript"],
   },
   {
     category: "Mobile",
@@ -207,14 +207,54 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
     {
       id: 5,
+      name: "MacOS Project",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-45 left-5",
+      windowPosition: "top-[5vh] left-5",
+      children: [
+        {
+          id: 1,
+          name: "Portfolio Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "The Portfolio Project is a modern, dynamic portfolio that showcases my development abilities in a practical, real-world context.",
+            "Rather than a static 'whoami' page, it delivers an immersive experience with bold UI components, an interactive desktop-style section, and a host of charming, detail-oriented features.",
+            "Built with React.js, Tailwind CSS, and GSAP, it ensures blistering performance, a cutting-edge aesthetic, and a clean, premium finish.",
+          ],
+        },
+        {
+          id: 2,
+          name: "github repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Alireza86510/My_MacOS_Portfolio.git",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "Portfolio.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/portfolio.png",
+        },
+      ],
+    },
+    {
+      id: 6,
       name: "CMS Project",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-5",
+      windowPosition: "top-[20vh] left-5",
       children: [
         {
           id: 1,
@@ -224,9 +264,9 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The CMS Project is a modern platform designed for managing content the best way.",
-            "Instead of a simple online blog, it delivers an immersive experience with bold user profile page, interactive posts section, and a comment section for each post.",
-            "It's built with ASP.Net Core and Bootstrap, ensuring fast performance, responsive design, and a clean, premium look.",
+            "The CMS Project is a cutting-edge platform engineered for seamless, best‑in‑class content management.",
+            "Far beyond a standard online blog, it offers an immersive experience with bold user profiles, an interactive posts section, and a lively comment system for every article.",
+            "Built on ASP.NET Core and styled with Bootstrap, it guarantees blazing‑fast performance, full responsiveness, and a clean, premium aesthetic.",
           ],
         },
         {
@@ -258,26 +298,25 @@ const WORK_LOCATION = {
         // },
       ],
     },
-    // ▶ Project 2
     {
-      id: 6,
-      name: "MacOS Project",
+      id: 7,
+      name: "OSS Shop",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-45 left-5", // icon position inside Finder
-      windowPosition: "top-[20vh] left-5", // optional: Finder window position
+      position: "top-45 right-55",
+      windowPosition: "top-[5vh] right-5",
       children: [
         {
           id: 1,
-          name: "Portfolio Project.txt",
+          name: "OSS Shop Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Portfolio Project is a modern portfolio designed to showcase my abilities in the practical way.",
-            "Instead of a simple whoami page, it delivers an amazing experience with bold UI components, interactive desktop section, and many more cute features",
-            "It's built with React.js, Tailwind and GSAP, ensuring lightning performance, modern design, and a tidy, premium look.",
+            "Designed for developers who thrive on discovery, The Open Source Spirit Shop is a sleek Next.js application that curates the hottest JavaScript repositories straight from GitHub.",
+            'But it doesn\'t stop at just ranking the top projects—its true magic lies in the "Mystery Potion," a random-pick feature that serves up an unexpected gem for you to explore, learn from, and contribute to.',
+            "Powered by advanced caching strategies for lightning-fast performance and beautifully styled with Tailwind CSS, the app delivers a clean, premium interface that makes navigating the open-source ecosystem feel effortless and inspiring.",
           ],
         },
         {
@@ -286,27 +325,102 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/Alireza86510/My_MacOS_Portfolio.git",
+          href: "https://github.com/Alireza86510/open-source-spirit-shop.git",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "Portfolio.png",
+          name: "OSS Shop.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/portfolio.png",
+          imageUrl: "/images/oss-shop.png",
         },
-        // {
-        //   id: 5,
-        //   name: "Design.fig",
-        //   icon: "/images/plain.png",
-        //   kind: "file",
-        //   fileType: "fig",
-        //   href: "https://google.com",
-        //   position: "top-60 right-20",
-        // },
+      ],
+    },
+
+    {
+      id: 8,
+      name: "Game Hub",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 right-55",
+      windowPosition: "top-[20vh] right-5",
+      children: [
+        {
+          id: 1,
+          name: "Game Hub Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "Game-Hub is a modern, interactive game discovery platform that brings the world of free-to-play games to your fingertips.",
+            "Far beyond a simple game list, it delivers a rich browsing experience with dynamic genre filtering, platform selection, smart sorting, and live search—all wrapped in a sleek, responsive interface with smooth skeleton loading and dark mode support.",
+            "Built with React, TypeScript, and Vite, and styled with Mantine UI, it fetches real-time data from the FreeToGame API to ensure lightning-fast performance, a clean component-based architecture, and a polished, premium look.",
+          ],
+        },
+        {
+          id: 2,
+          name: "github repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Alireza86510/game-hub.git",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "Game Hub.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/game-hub.png",
+        },
+      ],
+    },
+
+    {
+      id: 9,
+      name: "Movie Flix",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 right-10",
+      windowPosition: "top-[5vh] right-50",
+      children: [
+        {
+          id: 1,
+          name: "Movie Flix Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "MovieFlix is a sleek, native mobile app built for movie lovers to discover and explore films on the go.",
+            "Beyond a simple list of popular titles, it delivers a rich experience with real‑time search, detailed movie pages, and a dedicated saved section—all wrapped in a clean, responsive interface with smooth navigation and a polished native feel.",
+            "Powered by React Native and Expo, styled with NativeWind and Tailwind CSS, and fueled by live data from the TMDb API, it ensures fast performance, a modern component‑based architecture, and a premium, cinematic look.",
+          ],
+        },
+        {
+          id: 2,
+          name: "github repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Alireza86510/MovieFlix-App.git",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "Movie Flix.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/movie-flix.jpg",
+        },
       ],
     },
   ],
@@ -336,7 +450,7 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-50 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      // image: "/images/me.jpg",
       description: [
         "Hey! I’m Alireza 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript and React—and I love making things feel smooth, fast, and just a little bit delightful.",
